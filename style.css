@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'gilroy';
+    src: url('./Gilroy-Bold.ttf');
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    position: relative;
+    overflow: hidden;
+    /* background-color: palegreen; */
+}
+.pages{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+/* ---------------page(canvas)---------------------------- */
+#page{
+    position: relative;
+    background-color:#ffffffff;
+}
+#nav{
+    position: relative;
+    height: 10vh;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    border: .15vw solid rgb(196, 194, 194);
+    border-radius: 1vw;
+    margin-left: 5vw;
+    margin-top: 1.5vw;
+}
+#nav img{
+    height: 1.5vw;
+    align-items: center;
+    /* background-color: red; */
+    margin-top: 1.5vw;
+    margin-left: 1.5vw;
+}
+#nav-center{
+    display: flex;
+    margin-top: 1.5vw;
+    /* background-color: blue; */
+    width: 25vw;
+    justify-content: space-between;
+    cursor: pointer;
+}
+#nav-center h3{
+    font-size: 1vw;
+    font-weight: lighter;
+}
+#button{
+    position: relative;
+    margin-top: .75vw;
+    border: .15vw solid rgb(196, 194, 194);
+    margin-right: .8vw;
+    border-radius: .6vw;
+    height: 6.5vh;
+    width: 9vw;
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    /* font-weight: 400; */
+    font-size: .7vw;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+#button h2{
+    z-index: 9;
+}
+#box-move{
+    position: absolute;
+    transition: all ease .5s;
+    height: inherit;
+    width: 9vw;
+    left: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    white-space: nowrap;
+}
+/* #box-move:hover{
+    animation: buttonEfft 3s infinite;
+} */
+#page h1{
+    position: absolute;
+    font-size: 10vw;
+    font-weight: 900;
+    top: 14%;
+    left: 31%;
+}
+#page h5{
+    color: #878686;
+    font-size: 1.6vw;
+    position: absolute;
+    text-align: center;
+    top: 44%;
+    left: 36.5%;
+    opacity: 0;
+}
+canvas{
+    z-index: 9;
+    position: absolute;
+    min-height: 10vh;
+    min-width: 10vw;
+    /* background-color: red; */
+    top: 20.4%;
+    left: 28.5%;
+}
+/* ---------------page1---------------------------- */
+#page1{
+    position: relative;
+    background-color: steelblue;
+}
+/* ---------------page2---------------------------- */
+
+#page2{
+    background-color: rgb(70, 180, 142);
+}
+/* ---------------page3---------------------------- */
+
+#page3{
+    background-color: rgb(171, 70, 180);
+}
+/* ---------------page4---------------------------- */
+
+#page4{
+    background-color: rgb(171, 180, 70);
+}
