@@ -318,20 +318,75 @@ gsap.to("#page h5",{
     scroller:"#main",
     // markers:true,
     start:"top 30%",
-    end:"310% 30%"
+    end:"470% 30%",
+    scrub:1
   },
   opacity:1
 })
-var flag = true;
-function opacity1(flag){
-  if(flag) {
-    opacity:1
-    flag = false
-  }else{
-    opacity:0
-    flag= true
+
+const tl = gsap.timeline();
+
+
+tl.to("#temp1",{
+  scrollTrigger:{
+    pin:true,
+    trigger:"#temp1",
+    scroller:"#main",
+    // markers:true,
+    start:"50% 30%",
+    end:"150% 40%",
+    scrub:1
+  },
+  opacity:1,
+  onComplete:function(){
+    document.querySelector("#temp1").style.opacity = 0
   }
-}
+},0)
+
+tl.to("#keyWords",{
+  scrollTrigger:{
+    pin:true,
+    trigger:"#keyWords",
+    scroller:"#main",
+    // markers:true,
+    start:"60% 90%",
+    end:"158% 85%",
+    scrub:1
+  },
+  opacity:1,
+  onComplete:function(){
+    document.querySelector("#keyWords").style.opacity = 0
+  }
+},0)
 
 
-
+tl.to("#temp2",{
+  scrollTrigger:{
+    pin:true,
+    trigger:"#temp2",
+    scroller:"#main",
+    // markers:true,
+    start:"50% 40%",
+    end:"150% 50%",
+    scrub:1
+  },
+  opacity:1,
+  onComplete:function(){
+    document.querySelector("#temp2").style.opacity = 0
+  }
+},"a")
+tl.to("#kw",{
+  scrollTrigger:{
+    pin:true,
+    trigger:"#kw",
+    scroller:"#main",
+    // markers:true,
+    start:"50% 70%",
+    end:"168% 64%",
+    scrub:1
+  },
+  opacity:1,
+  onComplete:function(){
+    document.querySelector("#kw").style.opacity = 0
+  }
+},"a")
